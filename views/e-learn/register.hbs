@@ -1,0 +1,83 @@
+<head>
+	<title>LoginApp</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">  
+	<link rel="stylesheet" href="/stylesheets/reg-styles.css">
+</head>
+<body>
+<nav class="navbar">
+    <div class="nav-wrapper navbar-inner">
+      <a href="/" class="brand-logo">Student Solutions</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a href="/e-learn#courses">Our Courses</a></li>
+        <li><a href="/users/login">Sign In</a></li>
+        <li><a href="/contact">Contact Us</a></li>
+      </ul>
+    </div>
+</nav>
+{{#if errors}}
+      {{#each errors}}
+        <div class="alert alert-danger">{{msg}}</div>
+      {{/each}}
+{{/if}}
+<div class="container">
+	<h3>Sign Up</h3>
+<div class="row">
+			<form method="post" action="/users/register" class="col s12">
+			  <div class="row">
+				<div class="input-field col s6">
+				  <input id="username" type="text" name="username" class="validate">
+				  <label for="Username">UserName</label>
+				</div>
+				<div class="input-field col s6">
+				  <input id="name"  name="name" type="text" class="validate">
+				  <label for="Name">Name</label>
+				</div>
+				</div>
+				<div class="row">
+					<div class="input-field col s6">
+				  <input id="email" type="email" name="email" class="validate">
+				  <label for="email">Email</label>
+					</div>
+				<div class="input-field col s6">
+				  <input id="mobile" type="text" name="mobile" class="validate">
+				  <label for="Mobile">Mobile No</label>
+				</div>
+			  </div>
+				<div class="row">
+				<div class="input-field col s6">
+				  <input id="password" type="password" name="password" class="validate">
+				  <label for="password">Password</label>
+				</div>
+			  
+				<div class="input-field col s6">
+				  <input id="password2" type="password" name="password2" class="validate">
+				  <label for="Retype Password">Retype Password</label>
+				</div>
+			  </div>
+				<div class="row">
+				<div class="input-field col s4">
+				  <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+            <i class="material-icons right">send</i>
+          </button>
+				</div>
+        <div class="input-field col s4">
+				  <a href="/auth/facebook" class="btn fb"><span class="fa fa-facebook"></span>Sign in with Facebook</a>
+		
+				</div>
+        <div class="input-field col s4">
+				  <a href="/auth/google" class="btn google"><span class="fa fa-google-plus"></span>Sign in with Google</a>
+				</div>
+			  </div>
+			  
+			</form>
+		  </div>
+  </div>
+  
+  
+    
+  
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+</body>

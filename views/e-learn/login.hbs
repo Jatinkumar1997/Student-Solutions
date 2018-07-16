@@ -1,0 +1,47 @@
+<head>
+	<title>LoginApp</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">   
+	<link rel="stylesheet" href="/stylesheets/login-styles.css" />
+</head>
+<body>
+<nav class="navbar">
+    <div class="nav-wrapper navbar-inner">
+      <a href="/" class="brand-logo">Student Solutions</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a href="/e-learn#courses">Our Courses</a></li>
+        <li><a href="/users/login">Sign In</a></li>
+        <li><a href="/contact">Contact Us</a></li>
+      </ul>
+    </div>
+</nav>
+<div class="row">
+        <div class="col-lg-12">
+          {{#if success_msg}}
+            <div class="alert alert-success">{{success_msg}}</div>
+          {{/if}}
+
+          {{#if error_msg}}
+            <div class="alert alert-danger">{{error_msg}}</div>
+          {{/if}}
+
+          {{#if error}}
+            <div class="alert alert-danger">{{error}}</div>
+          {{/if}}
+        </div>
+</div>
+<div class="loginBox">
+			<img src="/stylesheets/user.png" class="user">
+			<h2>Log In Here</h2>
+			<form method="post" action="/users/login">
+				<p>UserName</p>
+				<input type="text" name="username" placeholder="Username">
+				<p>Password</p>
+				<input type="password" name="password" placeholder="Password">
+				<input type="submit" name="submit" value="Sign In">
+				<p>Don't have an account?<a href="/users/register">Sign Up Here</a></p>
+			</form>
+</div>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+</body>

@@ -1,0 +1,38 @@
+body
+{
+	margin: 0;
+	padding: 0;
+	background-size: cover;
+	font-family: sans-serif;
+}
+.container{
+    background: rgba(0,0,0,0.8);
+    padding: 20px;
+    margin-top: 10px;
+}
+.navbar{
+  margin: 0;
+  padding: 0;
+  background-color:rgba(83, 78, 78,0.60);
+}
+.navbar a:hover{
+    font: outline;
+    text-decoration: none;
+}
+.input-field{
+    color:white;
+    padding:5px;
+    margin-top:5px;
+}
+h3{
+    box-shadow: aqua;
+    text-align: center;
+    color: beige;
+}
+.fb {
+    background-color: blue;
+}
+
+.google{
+    background-color: red;
+}

@@ -1,0 +1,73 @@
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+<link rel="stylesheet" href="/stylesheets/course.css">
+<link href="https://fonts.googleapis.com/css?family=Lora|Playfair+Display" rel="stylesheet">
+</head>
+<body>
+<nav class="navbar">
+    <div class="nav-wrapper navbar-inner">
+      <a href="/" class="brand-logo">Student Solutions</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a href="/e-learn#courses">Our Courses</a></li>
+        <li><a href="/users/login">Sign In</a></li>
+        <li><a href="/contact">Contact Us</a></li>
+      </ul>
+    </div>
+  </nav>
+<h4>HTML Course</h4>
+<div class="tab">
+  <button class="tablinks" onclick="openCity(event, 'London')" id="defaultOpen">Introduction </button>
+  <button class="tablinks" onclick="openCity(event, 'Paris')">First Web Page</button>
+  <button class="tablinks" onclick="openCity(event, 'Tokyo')">HTML tags</button>
+  <button class="tablinks" onclick="openCity(event, 'Tokyo')">CSS</button>
+  
+  <a href="/e-learn/java/test" class="testlink">Take Test</a>
+</div>
+
+<div id="London" class="tabcontent">
+  <h5>Introduction to HTML</h5>
+  <iframe class="video" width="560" height="315" src="https://www.youtube.com/embed/dD2EISBDjWM?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+  
+  <p>HTML is the standard markup language for creating Web pages.
+    HTML stands for Hyper Text Markup Language
+    HTML describes the structure of Web pages using markup
+    HTML elements are the building blocks of HTML pages
+    HTML elements are represented by tags
+    HTML tags label pieces of content such as "heading", "paragraph", "table", and so on
+    Browsers do not display the HTML tags, but use them to render the content of the page</p>
+</div>
+
+<div id="Paris" class="tabcontent">
+  <h5>Creating the first web page</h5>
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/-USAeFpVf_A?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+  <p>In this video we go over the basic structure of HTML and create our first web page.</p> 
+</div>
+
+<div id="Tokyo" class="tabcontent">
+  <h3>HTML tags</h3>
+  <p></p>
+</div>
+
+<script>
+function openCity(evt, cityName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(cityName).style.display = "block";
+    evt.currentTarget.className += " active";
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+</body>

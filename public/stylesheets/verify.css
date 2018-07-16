@@ -1,0 +1,37 @@
+body{
+    background: blue;
+}
+.container{
+    position: absolute;
+    top: 30%;
+    left: 30%;
+    margin: 20px;
+    padding: 20px;
+    border: 2px solid black;
+    background: aquamarine;
+}
+input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    border: none;
+    border-radius: 6px;
+    color: #333;
+    font-size: 1.1em;
+    padding: .75em 1em;
+    margin-bottom: 1em;
+  }
+input[type=submit] {
+    background: #EB7F00;
+    color: #F3FFE2;
+  }
+input[type=tel] {
+    width: 170px;
+}
+input[type=text] {
+    flex-grow: 1;
+}
+input[type=submit]:active {
+    position: relative;
+    top: 2px;
+    left: 1px;
+}
